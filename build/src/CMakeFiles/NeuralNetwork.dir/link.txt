@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/NeuralNetwork.dir/main.cpp.o CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o -o ../NeuralNetwork 
