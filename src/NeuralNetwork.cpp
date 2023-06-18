@@ -212,7 +212,7 @@ void NeuralNetwork::accuracy(vector<vector<VectorXd>> test_data, int num_to_test
     cout << "Accuracy: " + to_string(accuracy) + "%" << endl;
 }
 
-void  NeuralNetwork::showWeights()
+void NeuralNetwork::showWeights()
 {
     for (int i = 0; i < this->num_of_layers - 1; i++)
     {
@@ -223,7 +223,7 @@ void  NeuralNetwork::showWeights()
 
 void NeuralNetwork::showBiases()
 {
-    for (int i = 0; i < this->num_of_layers; i++)
+    for (int i = 0; i < this->num_of_layers - 1; i++)
     {
         cout << this->biases[i] << endl;
         cout << endl;

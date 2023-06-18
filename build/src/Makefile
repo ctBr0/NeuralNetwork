@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.25.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ctbro/GithubRepos/Owner/NeuralNetwork
+CMAKE_SOURCE_DIR = /users/ctbro/GithubRepos/Owner/NeuralNetwork
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build
+CMAKE_BINARY_DIR = /users/ctbro/GithubRepos/Owner/NeuralNetwork/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/CMakeFiles /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src//CMakeFiles/progress.marks
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/CMakeFiles 0
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(CMAKE_COMMAND) -E cmake_progress_start /users/ctbro/GithubRepos/Owner/NeuralNetwork/build/CMakeFiles /users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src//CMakeFiles/progress.marks
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /users/ctbro/GithubRepos/Owner/NeuralNetwork/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/NeuralNetwork.dir/rule:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/NeuralNetwork.dir/rule
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/NeuralNetwork.dir/rule
 .PHONY : src/CMakeFiles/NeuralNetwork.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ NeuralNetwork: src/CMakeFiles/NeuralNetwork.dir/rule
 
 # fast build rule for target.
 NeuralNetwork/fast:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/build
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/build
 .PHONY : NeuralNetwork/fast
 
 NeuralNetwork.o: NeuralNetwork.cpp.o
@@ -135,7 +135,7 @@ NeuralNetwork.o: NeuralNetwork.cpp.o
 
 # target to build an object file
 NeuralNetwork.cpp.o:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o
 .PHONY : NeuralNetwork.cpp.o
 
 NeuralNetwork.i: NeuralNetwork.cpp.i
@@ -143,7 +143,7 @@ NeuralNetwork.i: NeuralNetwork.cpp.i
 
 # target to preprocess a source file
 NeuralNetwork.cpp.i:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.i
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.i
 .PHONY : NeuralNetwork.cpp.i
 
 NeuralNetwork.s: NeuralNetwork.cpp.s
@@ -151,7 +151,7 @@ NeuralNetwork.s: NeuralNetwork.cpp.s
 
 # target to generate assembly for a file
 NeuralNetwork.cpp.s:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.s
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.s
 .PHONY : NeuralNetwork.cpp.s
 
 main.o: main.cpp.o
@@ -159,7 +159,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/main.cpp.o
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -167,7 +167,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/main.cpp.i
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -175,7 +175,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/main.cpp.s
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/NeuralNetwork.dir/build.make src/CMakeFiles/NeuralNetwork.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -204,6 +204,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

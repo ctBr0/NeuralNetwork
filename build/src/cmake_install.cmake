@@ -1,4 +1,4 @@
-# Install script for directory: /Users/ctbro/GithubRepos/Owner/NeuralNetwork/src
+# Install script for directory: /users/ctbro/GithubRepos/Owner/NeuralNetwork/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

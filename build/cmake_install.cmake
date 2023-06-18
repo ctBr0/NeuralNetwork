@@ -1,4 +1,4 @@
-# Install script for directory: /Users/ctbro/GithubRepos/Owner/NeuralNetwork
+# Install script for directory: /users/ctbro/GithubRepos/Owner/NeuralNetwork
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src/cmake_install.cmake")
+  include("/users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/users/ctbro/GithubRepos/Owner/NeuralNetwork/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

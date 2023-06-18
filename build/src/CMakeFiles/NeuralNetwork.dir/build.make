@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.25.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ctbro/GithubRepos/Owner/NeuralNetwork
+CMAKE_SOURCE_DIR = /users/ctbro/GithubRepos/Owner/NeuralNetwork
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build
+CMAKE_BINARY_DIR = /users/ctbro/GithubRepos/Owner/NeuralNetwork/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/NeuralNetwork.dir/depend.make
@@ -70,32 +70,32 @@ include src/CMakeFiles/NeuralNetwork.dir/progress.make
 include src/CMakeFiles/NeuralNetwork.dir/flags.make
 
 src/CMakeFiles/NeuralNetwork.dir/main.cpp.o: src/CMakeFiles/NeuralNetwork.dir/flags.make
-src/CMakeFiles/NeuralNetwork.dir/main.cpp.o: /Users/ctbro/GithubRepos/Owner/NeuralNetwork/src/main.cpp
+src/CMakeFiles/NeuralNetwork.dir/main.cpp.o: /users/ctbro/GithubRepos/Owner/NeuralNetwork/src/main.cpp
 src/CMakeFiles/NeuralNetwork.dir/main.cpp.o: src/CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/NeuralNetwork.dir/main.cpp.o"
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/NeuralNetwork.dir/main.cpp.o -MF CMakeFiles/NeuralNetwork.dir/main.cpp.o.d -o CMakeFiles/NeuralNetwork.dir/main.cpp.o -c /Users/ctbro/GithubRepos/Owner/NeuralNetwork/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/ctbro/GithubRepos/Owner/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/NeuralNetwork.dir/main.cpp.o"
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/NeuralNetwork.dir/main.cpp.o -MF CMakeFiles/NeuralNetwork.dir/main.cpp.o.d -o CMakeFiles/NeuralNetwork.dir/main.cpp.o -c /users/ctbro/GithubRepos/Owner/NeuralNetwork/src/main.cpp
 
 src/CMakeFiles/NeuralNetwork.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/main.cpp.i"
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ctbro/GithubRepos/Owner/NeuralNetwork/src/main.cpp > CMakeFiles/NeuralNetwork.dir/main.cpp.i
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/ctbro/GithubRepos/Owner/NeuralNetwork/src/main.cpp > CMakeFiles/NeuralNetwork.dir/main.cpp.i
 
 src/CMakeFiles/NeuralNetwork.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/main.cpp.s"
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ctbro/GithubRepos/Owner/NeuralNetwork/src/main.cpp -o CMakeFiles/NeuralNetwork.dir/main.cpp.s
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/ctbro/GithubRepos/Owner/NeuralNetwork/src/main.cpp -o CMakeFiles/NeuralNetwork.dir/main.cpp.s
 
 src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o: src/CMakeFiles/NeuralNetwork.dir/flags.make
-src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o: /Users/ctbro/GithubRepos/Owner/NeuralNetwork/src/NeuralNetwork.cpp
+src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o: /users/ctbro/GithubRepos/Owner/NeuralNetwork/src/NeuralNetwork.cpp
 src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o: src/CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o"
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o -MF CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o.d -o CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o -c /Users/ctbro/GithubRepos/Owner/NeuralNetwork/src/NeuralNetwork.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/ctbro/GithubRepos/Owner/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o"
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o -MF CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o.d -o CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o -c /users/ctbro/GithubRepos/Owner/NeuralNetwork/src/NeuralNetwork.cpp
 
 src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.i"
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ctbro/GithubRepos/Owner/NeuralNetwork/src/NeuralNetwork.cpp > CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.i
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/ctbro/GithubRepos/Owner/NeuralNetwork/src/NeuralNetwork.cpp > CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.i
 
 src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.s"
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ctbro/GithubRepos/Owner/NeuralNetwork/src/NeuralNetwork.cpp -o CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.s
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/ctbro/GithubRepos/Owner/NeuralNetwork/src/NeuralNetwork.cpp -o CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.s
 
 # Object files for target NeuralNetwork
 NeuralNetwork_OBJECTS = \
@@ -109,18 +109,18 @@ NeuralNetwork: src/CMakeFiles/NeuralNetwork.dir/main.cpp.o
 NeuralNetwork: src/CMakeFiles/NeuralNetwork.dir/NeuralNetwork.cpp.o
 NeuralNetwork: src/CMakeFiles/NeuralNetwork.dir/build.make
 NeuralNetwork: src/CMakeFiles/NeuralNetwork.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../NeuralNetwork"
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NeuralNetwork.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/users/ctbro/GithubRepos/Owner/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../NeuralNetwork"
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NeuralNetwork.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/NeuralNetwork.dir/build: NeuralNetwork
 .PHONY : src/CMakeFiles/NeuralNetwork.dir/build
 
 src/CMakeFiles/NeuralNetwork.dir/clean:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && $(CMAKE_COMMAND) -P CMakeFiles/NeuralNetwork.dir/cmake_clean.cmake
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src && $(CMAKE_COMMAND) -P CMakeFiles/NeuralNetwork.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/NeuralNetwork.dir/clean
 
 src/CMakeFiles/NeuralNetwork.dir/depend:
-	cd /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/ctbro/GithubRepos/Owner/NeuralNetwork /Users/ctbro/GithubRepos/Owner/NeuralNetwork/src /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src /Users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src/CMakeFiles/NeuralNetwork.dir/DependInfo.cmake --color=$(COLOR)
+	cd /users/ctbro/GithubRepos/Owner/NeuralNetwork/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /users/ctbro/GithubRepos/Owner/NeuralNetwork /users/ctbro/GithubRepos/Owner/NeuralNetwork/src /users/ctbro/GithubRepos/Owner/NeuralNetwork/build /users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src /users/ctbro/GithubRepos/Owner/NeuralNetwork/build/src/CMakeFiles/NeuralNetwork.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/NeuralNetwork.dir/depend
 
