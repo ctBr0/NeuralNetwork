@@ -24,11 +24,13 @@ class NeuralNetwork
     NeuralNetwork(vector<int>); // ex. NeuralNetwork([1,1,1]) for a 3 layer neural network with a single node in each layer
     VectorXd feedForward(VectorXd);
     VWofLayer propagateBackward(VectorXd, VectorXd);
-    void BSGD(vector<array<VectorXd, 2>>, double, int, int); // batch stochastic gradient descent
-    void updateWeightsAndBiases(vector<array<VectorXd, 2>>, double);
+    void BSGD(vector<vector<VectorXd>>, double, int, int); // batch stochastic gradient descent
+    void updateWeightsAndBiases(vector<vector<VectorXd>>, double);
     VectorXd squishify(VectorXd); // sigmoid function
     VectorXd squishify_der(VectorXd); // derivative of sigmoid function
-    void accuracy(vector<array<VectorXd, 2>>, int);
+    void accuracy(vector<vector<VectorXd>>, int);
+    void showWeights();
+    void showBiases();
 
     private:
     vector<int> neurons_by_layer;
