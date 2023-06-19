@@ -31,6 +31,7 @@ class NeuralNetwork
     void accuracy(vector<vector<VectorXd>>, int);
     void showWeights();
     void showBiases();
+    int indexOfVectorCoeff(VectorXd, double);
 
     private:
     vector<int> neurons_by_layer;

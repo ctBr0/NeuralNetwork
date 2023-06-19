@@ -172,7 +172,7 @@ int main(int argc, char** argv)
 
     // Train the network
 
-    network->BSGD(train_data, 0.01, 10, 3);
+    network->BSGD(train_data, 0.01, 100, 20);
 
     network->showBiases();
 
@@ -180,7 +180,7 @@ int main(int argc, char** argv)
 
     // call the accuracy method with the testing data
 
-    network->accuracy(train_data,20);
+    network->accuracy(test_data,50);
 
     delete network;
 

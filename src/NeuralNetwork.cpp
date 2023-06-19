@@ -188,10 +188,12 @@ void NeuralNetwork::accuracy(vector<vector<VectorXd>> test_data, int num_to_test
     int actual_index = 0;
     int test_index = 0;
     VectorXd actual_output;
-    for (int i = 0; i < test_data.size(); i++)
+    for (int i = 0; i < num_to_test; i++)
     {
         actual_output = this->feedForward(test_data[i][0]);
-        int max_index = actual_output.maxCoeff();
+        int actual_index = indexOfVectorCoeff(actual_output,actual_output.maxCoeff());
+        int test_index = indexOfVectorCoeff(test_data[i][1],test_data[i][1].maxCoeff());
+        /*
         for (int i = 0; i < actual_output.cols(); i++)
         {
             if (max_index == actual_output.coeff(i, 1))
@@ -203,6 +205,8 @@ void NeuralNetwork::accuracy(vector<vector<VectorXd>> test_data, int num_to_test
                 test_index = i;
             }
         }
+        */
+
         if (actual_index == test_index)
         {
             count++;
@@ -228,4 +232,21 @@ void NeuralNetwork::showBiases()
         cout << this->biases[i] << endl;
         cout << endl;
     }
+}
+
+int NeuralNetwork::indexOfVectorCoeff(VectorXd vector, double coeff)
+{
+    int index = 0;
+    int output;
+    bool found = false;
+    while (!found || index < vector.size())
+    {
+        if (coeff == vector(index))
+        {
+            found = true;
+            output = index;
+        }
+        index++;
+    }
+    return output;
 }
