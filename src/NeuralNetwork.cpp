@@ -81,14 +81,7 @@ void NeuralNetwork::updateWeightsAndBiases(vector<vector<VectorXd>> batch, doubl
 
      for (int i = 1; i < this->num_of_layers; i++)
     {
-        // VectorXd layer(neurons_by_layer[i]);
-        // VectorXd layer = VectorXd::Zero(neurons_by_layer[i]);
-        // grad_biases.push_back(VectorXd::Zero(neurons_by_layer[i]));
-        // grad_biases.push_back(layer.setZero());
         grad_biases.push_back(VectorXd::Zero(neurons_by_layer[i]));
-        // MatrixXd layer(neurons_by_layer[i],neurons_by_layer[i-1]);
-        // MatrixXd layer = MatrixXd::Zero(this->neurons_by_layer[i],this->neurons_by_layer[i+1]);
-        // grad_weights.push_back(layer.setZero());
         grad_weights.push_back(MatrixXd::Zero(neurons_by_layer[i],neurons_by_layer[i-1]));
     }
 
@@ -119,13 +112,7 @@ VWofLayer NeuralNetwork::propagateBackward(VectorXd input, VectorXd output)
 
      for (int i = 1; i < this->num_of_layers; i++)
     {
-        // VectorXd layer(neurons_by_layer[i]);
-        // VectorXd layer = VectorXd::Zero(this->neurons_by_layer[i]);
-        // grad_biases.push_back(layer.setZero());
         grad_biases.push_back(VectorXd::Zero(neurons_by_layer[i]));
-        // MatrixXd layer(neurons_by_layer[i],neurons_by_layer[i-1]);
-        // MatrixXd layer = MatrixXd::Zero(this->neurons_by_layer[i],this->neurons_by_layer[i+1]);
-        // grad_weights.push_back(layer.setZero());
         grad_weights.push_back(MatrixXd::Zero(neurons_by_layer[i],neurons_by_layer[i-1]));
     }
     
@@ -138,9 +125,6 @@ VWofLayer NeuralNetwork::propagateBackward(VectorXd input, VectorXd output)
     activations.push_back(input);
     for (int i = 0; i < grad_biases.size(); i++)
     {
-        // z_value = squishify(((this->weights[i].row(i).dot(curr_active)) + this->biases[i].array()).matrix());
-        // z_value = ((this->weights[i]*curr_active).array() + this->biases[i].array()).matrix();
-        // z_value = ((curr_active.asDiagonal()*this->weights[i]).array() + this->biases[i].array()).matrix();
         z_value = ((this->weights[i]*curr_active.matrix()).array() + this->biases[i].array()).matrix();
         list_of_z_values.push_back(z_value);
         curr_active = squishify(z_value);
@@ -152,16 +136,12 @@ VWofLayer NeuralNetwork::propagateBackward(VectorXd input, VectorXd output)
     delta = ((activations.back().array() - output.array()) * squishify_der(list_of_z_values.back()).array()).matrix();
     grad_biases.pop_back();
     grad_biases.push_back(delta);
-    // int rows = grad_weights[grad_weights.size() - 1].rows();
-    // int cols = grad_weights[grad_weights.size() - 1].cols();
     grad_weights.pop_back();
-    // grad_weights.push_back((delta.dot(activations[activations.size() - 2].transpose()) + MatrixXd::Zero(rows, cols).array()).matrix());
     grad_weights.push_back(delta*((activations[activations.size() - 2].transpose()).matrix()));
 
     for (int i = 2; i < this->num_of_layers; i++)
     {
         z_value = list_of_z_values[list_of_z_values.size() - i];
-        // delta = ((((this->weights[this->weights.size() - i + 1]).row(i).transpose()).dot(delta)) * squishify_der(z_value).array()).matrix();
         delta = ((((this->weights[this->weights.size() - i + 1]).transpose()).matrix()*delta).array() * squishify_der(z_value).array()).matrix();
         grad_biases[grad_biases.size() - i] = delta;
         grad_weights[grad_weights.size() - i] = delta*((activations[activations.size() - i - 1]).transpose().matrix());
@@ -193,26 +173,12 @@ void NeuralNetwork::accuracy(vector<vector<VectorXd>> test_data, int num_to_test
         actual_output = this->feedForward(test_data[i][0]);
         int actual_index = indexOfVectorCoeff(actual_output,actual_output.maxCoeff());
         int test_index = indexOfVectorCoeff(test_data[i][1],test_data[i][1].maxCoeff());
-        /*
-        for (int i = 0; i < actual_output.cols(); i++)
-        {
-            if (max_index == actual_output.coeff(i, 1))
-            {
-                actual_index = i;
-            }
-            if (test_index == 1)
-            {
-                test_index = i;
-            }
-        }
-        */
-
         if (actual_index == test_index)
         {
             count++;
         }
     }
-    accuracy = ((double)count / test_data.size()) * 100;
+    accuracy = ((double)count / (double)test_data.size()) * 100.0;
     cout << "Accuracy: " + to_string(accuracy) + "%" << endl;
 }
 

@@ -78,8 +78,8 @@ int main(int argc, char** argv)
     cin >> test_loc;
     */
 
-    train_loc = "../mnist_train_small.csv";
-    test_loc = "../mnist_test_small.csv";
+    train_loc = "../mnist_train_50000.csv";
+    test_loc = "../mnist_test_10000.csv";
 
     // num_train_samples = 100;
     // num_test_samples = 100;
