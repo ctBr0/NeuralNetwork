@@ -14,6 +14,7 @@ int main(int argc, char** argv)
     // Instantiate neural network
 
     int input, hidden, output, num_of_layers;
+    int num_train_samples, num_test_samples;
     vector<int> neurons_by_layer;
     string train_loc, test_loc;
     string sep = "\n---------------------------------------------------------------------------\n";
@@ -46,6 +47,14 @@ int main(int argc, char** argv)
 
     cout << sep << "Generating network..." << sep << endl;
 
+    cout << sep << "Enter number of samples to import... " << sep << endl;
+
+    cout << "Number of samples for training:" << endl;
+    cin >> num_train_samples;
+
+    cout << "Number of samples for testing:" << endl;
+    cin >> num_test_samples;
+
     // Show intial weights and biases
 
     // cout << "Initial weights: " << endl;
@@ -53,7 +62,7 @@ int main(int argc, char** argv)
     // network->showWeights();
     // cout << "Intital biases: " << endl;
     // cout << endl;
-    network->showBiases();
+    // network->showBiases();
 
     // Obtain locations of input training and testing files
 
@@ -71,6 +80,9 @@ int main(int argc, char** argv)
 
     train_loc = "../mnist_train_small.csv";
     test_loc = "../mnist_test_small.csv";
+
+    // num_train_samples = 100;
+    // num_test_samples = 100;
 
     // Parse the csv input files and convert the data into vectors
 
@@ -91,8 +103,9 @@ int main(int argc, char** argv)
         VectorXd input(784); // according to the MNIST dataset
         VectorXd output(10); // according to the MNIST dataset
 
+        int line_no = 0;
         train_file.ignore(10000,'\n'); // skip the first line
-        while(getline(train_file,line))
+        while(getline(train_file,line) && line_no < num_train_samples)
         {
             stringstream lineStream(line);
             string cell;
@@ -112,6 +125,8 @@ int main(int argc, char** argv)
             input_output.push_back(input);
             input_output.push_back(output);
             train_data.push_back(input_output);
+
+            line_no++;
         }
         train_file.close();
     }
@@ -127,8 +142,9 @@ int main(int argc, char** argv)
         VectorXd input(784); // according to the MNIST dataset
         VectorXd output(10); // according to the MNIST dataset
 
+        int line_no = 0;
         test_file.ignore(10000,'\n'); // skip the first line
-        while(getline(test_file,line))
+        while(getline(test_file,line) && line_no < num_test_samples)
         {
             stringstream lineStream(line);
             string cell;
@@ -148,6 +164,8 @@ int main(int argc, char** argv)
             input_output.push_back(input);
             input_output.push_back(output);
             test_data.push_back(input_output);
+
+            line_no++;
         }
         test_file.close();
     }
@@ -159,28 +177,30 @@ int main(int argc, char** argv)
     
     // Show vector sizes
 
+    /*
     cout << sep << "Number of samples... " << sep << endl;
 
     cout << "Training samples: " << endl;
     cout << train_data.size() << endl;
-    // cout << "First 3 samples of the training dataset: " << endl;
-    // head(train_data,3);
+    cout << "First 3 samples of the training dataset: " << endl;
+    head(train_data,3);
     cout << "Testing samples: " << endl;
     cout << test_data.size() << endl;
-    // cout << "First 3 samples of the testing dataset: " << endl;
-    // head(test_data,3);
+    cout << "First 3 samples of the testing dataset: " << endl;
+    head(test_data,3);
+    */
 
     // Train the network
 
-    network->BSGD(train_data, 0.01, 100, 20);
+    cout << sep << "Training the neural network... " << sep << endl;
 
-    network->showBiases();
+    network->BSGD(train_data, 0.01, 100, 20);
 
     // Test data
 
-    // call the accuracy method with the testing data
+    cout << sep << "Evaluating the neural network... " << sep << endl;
 
-    network->accuracy(test_data,50);
+    network->accuracy(test_data,test_data.size());
 
     delete network;
 
